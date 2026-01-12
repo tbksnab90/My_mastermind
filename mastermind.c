@@ -35,14 +35,11 @@ int     find_missplaced(char* code, char* buff) {
 
 char*       fill_gap(char* str) {
 
-    int i = 0, count = 0;
+    int i = 0;
     if (str) {
         while (str[i] != '\0') {
-            if (str[i] >= '0' && str[i] <= '9')
-                count++;
-            else {
+            if (str[i] <= '0' && str[i] >= '9')
                 str[i] = '+';
-            }
             i++;
         }
     }
