@@ -19,7 +19,7 @@ char*       check_flags(char** argv, char flag) {
     int i = 0, j;
     char* data = NULL;
 
-    while (argv[i] != '\0') {
+    while (argv[i] != NULL) {
         j = 0;
         while (argv[i][j] != '\0') {
             if (argv[i][j] == '-' && argv[i][j + 1] == flag) {
